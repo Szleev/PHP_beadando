@@ -67,34 +67,34 @@
 
                 @endif
                 <div class="div_center">
-                    <h1 class="font_size">Edit Product</h1>
+                    <h1 class="font_size">Termék szerkesztése</h1>
 
                     <form action="{{url('/update_product_confirm',$product->id)}}" method="POST" enctype="multipart/form-data">
 
                         @csrf
 
                         <div class="div_design">
-                            <label>Product title :</label>
+                            <label>Termék neve :</label>
                             <input class="text_color" type="text" name="title" placeholder="Write a title" required="" value="{{$product->title}}">
                         </div>
                         <div class="div_design">
-                            <label>Product description :</label>
-                            <input class="text_color" type="text" name="description" placeholder="Write a description" required="" value="{{$product->description}}">
+                            <label>Termék leírása :</label>
+                            <input class="text_color" type="text" name="description" placeholder="Adj meg valamit" required="" value="{{$product->description}}">
                         </div>
                         <div class="div_design">
-                            <label>Product price :</label>
-                            <input class="text_color" type="number" min="0" name="price" placeholder="Add price" required="" value="{{$product->price}}">
+                            <label>Termék ára :</label>
+                            <input class="text_color" type="number" min="0" name="price" placeholder="Adj meg valamit" required="" value="{{$product->price}}">
                         </div>
                         <div class="div_design">
-                            <label>Product discount price :</label>
-                            <input class="text_color" type="number" name="dis_price" placeholder="Add discount price" value="{{$product->discount_price}}">
+                            <label>Termék akciós ára :</label>
+                            <input class="text_color" type="number" name="dis_price" placeholder="Adj meg valamit" value="{{$product->discount_price}}">
                         </div>
                         <div class="div_design">
-                            <label>Product quantity :</label>
-                            <input class="text_color" type="number" min="0" name="quantity" placeholder="Add quantity" required="" value="{{$product->quantity}}">
+                            <label>Termék darabszáma :</label>
+                            <input class="text_color" type="number" min="0" name="quantity" placeholder="Adj meg valamit" required="" value="{{$product->quantity}}">
                         </div>
                         <div class="div_design">
-                            <label>Product category :</label>
+                            <label>Termék kategória :</label>
                             <select class="text_color" name="category" required="" >
 
                                 <option value="{{$product->category}}" selected="">{{$product->category}}</option>
@@ -106,16 +106,16 @@
                             </select>
                         </div>
                         <div class="div_design">
-                            <label>Current product image :</label>
+                            <label>Jelenlegi kép :</label>
                             <img style="margin:auto;" height="150" width="150" src="/product/{{$product->image}}" alt="">
                         </div>
                         <div class="div_design">
-                            <label>Change product image here :</label>
+                            <label>Kép cseréje :</label>
                             <input type="file" min="0" name="image">
                         </div>
                         <div class="div_design">
 
-                            <input type="submit" value="Save" class="btn btn-primary">
+                            <input type="submit" value="Mentés" class="btn btn-primary">
                         </div>
 
                     </form>

@@ -95,7 +95,7 @@
                             <img class="img_size" src="/product/{{$order->image}}" alt="">
                         </td>
                         <td>
-                            @if($order->delivery_status=='Kiszállítás folyamatban')
+                            @if($order->delivery_status=='Folyamatban')
                             <a href="{{url('delivered',$order->id)}}" class="btn btn btn-success" style="font-size: 25px" onclick="return confirm('Biztosan ki van szállítva a termék?')"><i class="fas fa-shipping-fast" style="color: whitesmoke;"></i></a>
                             @else
                             <p style="font-size: 20px"><span>&#10003;</span></p>

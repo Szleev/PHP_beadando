@@ -44,12 +44,12 @@
                         <img src="product/{{$products->image}}" alt="">
                     </div>
                     <div class="detail-box">
-                        <h5>
+                        <h5 style="padding-right: 10px">
                             {{$products->title}}
                         </h5>
 
                         @if($products->discount_price!=null)
-                        <h6  style="color: #f7444e">
+                        <h6  style="color: #f7444e; padding-right: 10px">
                             {{$products->discount_price}}Ft
                         </h6>
                             <del>

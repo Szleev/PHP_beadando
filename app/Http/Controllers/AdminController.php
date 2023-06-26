@@ -25,13 +25,13 @@ class AdminController extends Controller
         $data=new category;
         $data->category_name=$request->category;
         $data->save();
-        return redirect()->back()->with('message', 'Category added succesfully!');
+        return redirect()->back()->with('message', 'Sikeres hozzáadás!');
     }
     public function delete_category($id)
     {
         $data=category::find($id);
         $data->delete();
-        return redirect()->back()->with('message','Category deleted succesfully!');
+        return redirect()->back()->with('message','Sikeres törlés!');
     }
     public function view_product()
     {
@@ -54,7 +54,7 @@ class AdminController extends Controller
         $request->image->move('product', $image_name);
         $product->image=$image_name;
         $product->save();
-        return redirect()->back()->with('message','Product added succesfully!');
+        return redirect()->back()->with('message','Sikeres hozzáadás!');
     }
 
     public function show_product()
@@ -66,7 +66,7 @@ class AdminController extends Controller
     {
         $product=product::find($id);
         $product->delete();
-        return redirect()->back()->with('message','Product deleted succefully!');
+        return redirect()->back()->with('message','Sikeres törlés!');
     }
     public function update_product($id)
     {
@@ -93,7 +93,7 @@ class AdminController extends Controller
 
 
         $product->save();
-        return redirect()->back()->with('message','Product saved succesfully!');
+        return redirect()->back()->with('message','Sikeres mentés!');
     }
 
     public function order()

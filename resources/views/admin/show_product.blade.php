@@ -94,7 +94,7 @@
 
                         </td>
                         <td>
-                            <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this?')" href="{{url('delete_product', $product->id)}}">Törlés</a>
+                            <a class="btn btn-danger" onclick="return confirm('Biztosan ki akarod törölni?')" href="{{url('delete_product', $product->id)}}">Törlés</a>
                         </td>
                         <td>
                             <a class="btn btn-secondary" href="{{url('update_product', $product->id)}}">Szerkesztés</a>
